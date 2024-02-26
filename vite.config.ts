@@ -10,7 +10,13 @@ const packageName = packageJson.name;
 export default defineConfig({
 	root: "sources",
 	plugins: [
-		dts({})
+		dts({
+			outDir: 'dist', // dts.root + 'dist' => where we need to rollup.
+			root: "../", //vite.root + ../ = ./ = (dts.root)
+			staticImport: true,
+			insertTypesEntry: true,
+			rollupTypes: true
+		})
 	],
 	build: {
 		outDir: '../dist',

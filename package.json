@@ -18,6 +18,7 @@
   "scripts": {
     "dev": "vite --host",
     "build": "rimraf ./dist && tsc && vite build",
+	"tsc": "npx tsc",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
     "lint:scripts": "eslint . --ext .ts",

@@ -1,7 +1,6 @@
 {
 	"compilerOptions": {
 		"rootDir": "./sources",
-
 		"target": "ESNext",
 		"useDefineForClassFields": true,
 		"module": "ESNext",
@@ -22,14 +21,14 @@
 			"vite/client",
 			"node"
 		],
-		"outDir": "dist",
+		"outDir": "./dist",
 		//"noEmit": true,
-		"composite": true,
+		"composite": false, //build will not work with true, likely because of rimraf
 		"declaration":true,
 		"emitDeclarationOnly": true
 	},
 	"include": [
-		"sources"
+		"./sources"
 	],
 
 	"exclude": [
